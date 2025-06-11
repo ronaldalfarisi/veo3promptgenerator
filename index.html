@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veo 3 Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Veo 3 Consistent Character Prompt Generator</h1>
+        <form id="prompt-form">
+            <div class="form-group">
+                <label for="judul-scene">1. Judul Scene</label>
+                <input type="text" id="judul-scene" placeholder="Contoh: Terminal bus malam">
+            </div>
+            <div class="form-group">
+                <label for="deskripsi-karakter">2. Deskripsi Karakter Inti</label>
+                <textarea id="deskripsi-karakter" rows="6" placeholder="Contoh: Seorang vlogger wanita muda asal Minang berusia 27 tahun.&#10;Perawakan/Bentuk Tubuh: tubuh mungil, tinggi 158cm, bentuk badan proporsional.&#10;Warna kulit: sawo matang cerah.&#10;Rambut: ikal sebahu, hitam kecokelatan, diikat setengah ke belakang.&#10;Wajah: wajah oval, alis tebal alami, mata hitam besar, senyum ramah, pipi merona, bibir natural dengan sentuhan lip tint.&#10;Pakaian: mengenakan jaket parasut warna kuning mustard dan celana panjang hitam, membawa ransel kecil."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="suara-karakter">3. Detail Suara Karakter</label>
+                <textarea id="suara-karakter" rows="5" placeholder="Contoh: Dia berbicara dengan suara wanita muda yang hangat dan penuh semangat.&#10;Nada: mezzo-soprano.&#10;Timbre: bersahabat dan enerjik.&#10;Aksen/Logat: logat Indonesia dengan sentuhan khas Minang halus, berbicara murni dalam Bahasa Indonesia.&#10;Cara Berbicara: tempo sedang-cepat, gaya bicara lincah dan ekspresif.&#10;PENTING: Seluruh dialog harus dalam Bahasa Indonesia dengan pengucapan natural dan jelas. Pastikan suara karakter ini konsisten di seluruh video."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="aksi-karakter">4. Aksi Karakter</label>
+                <input type="text" id="aksi-karakter" placeholder="Contoh: berjalan di sekitar terminal bus malam sambil melihat-lihat aktivitas penumpang dan pedagang.">
+            </div>
+            <div class="form-group">
+                <label for="ekspresi-karakter">5. Ekspresi Karakter</label>
+                <input type="text" id="ekspresi-karakter" placeholder="Contoh: Karakter menunjukkan ekspresi kagum dan antusias, sering tersenyum sambil melirik kamera.">
+            </div>
+            <div class="form-group">
+                <label for="latar-tempat-waktu">6. Latar Tempat & Waktu</label>
+                <textarea id="latar-tempat-waktu" rows="3" placeholder="Contoh: latar tempat: di terminal bus antar kota malam hari, terdapat pedagang kaki lima di pinggir jalur keberangkatan, beberapa bus berjajar dengan lampu menyala.&#10;Waktu: malam hari, hujan rintik-rintik."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="detail-visual">7. Detail Visual Tambahan</label>
+                <div class="visual-details-container">
+                    <div class="form-group">
+                        <label for="gerakan-kamera">Gerakan Kamera:</label>
+                        <select id="gerakan-kamera">
+                            <!-- Options will be added by script.js -->
+                        </select>
+                    </div>
+                    <textarea id="detail-visual-tambahan" rows="4" placeholder="Pencahayaan: natural dari lampu jalan dan lampu bus, pantulan cahaya pada aspal basah.&#10;Gaya Video/Art Style: cinematic realistis.&#10;Kualitas Visual: Resolusi 4K."></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="suasana-keseluruhan">8. Suasana Keseluruhan</label>
+                <input type="text" id="suasana-keseluruhan" placeholder="Contoh: Suasana sibuk, ramai, dengan kesan perjalanan malam yang hidup dan dinamis meskipun hujan.">
+            </div>
+            <div class="form-group">
+                <label for="suara-lingkungan">9. Suara Lingkungan/Ambience</label>
+                <input type="text" id="suara-lingkungan" placeholder="Contoh: SOUND: suara mesin bus menyala, pengumuman dari pengeras suara, derai hujan ringan, dan percakapan samar antar penumpang dan pedagang.">
+            </div>
+            <div class="form-group">
+                <label for="dialog-karakter">10. Dialog Karakter</label>
+                <input type="text" id="dialog-karakter" placeholder="Contoh: DIALOG dalam Bahasa Indonesia: Karakter berkata: Tiap kota punya terminal kayak gini, dan aku suka banget suasana malamnya… hangat walau gerimis begini. Rasanya kayak perjalanan baru mau dimulai.">
+            </div>
+            <div class="form-group">
+                <label for="negative-prompt">11. Negative Prompt</label>
+                <textarea id="negative-prompt" rows="3" placeholder="Contoh: Hindari: teks di layar, subtitle, tulisan di video, font, logo, distorsi, artefak, anomali, wajah ganda, anggota badan cacat, tangan tidak normal, orang tambahan, objek mengganggu, kualitas rendah, buram, glitch, suara robotik, suara pecah."></textarea>
+            </div>
+            <button type="button" id="generate-btn">Generate Prompt</button>
+        </form>
+        <div class="output-container">
+            <div class="output-column">
+                <h2>Prompt (Bahasa Indonesia - Editable)</h2>
+                <textarea id="output-indonesia" rows="20"></textarea>
+            </div>
+            <div class="output-column">
+                <h2>Prompt (English - Final)</h2>
+                <textarea id="output-english" rows="20" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
