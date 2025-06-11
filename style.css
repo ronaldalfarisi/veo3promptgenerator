@@ -62,12 +62,18 @@ textarea {
     gap: 20px;
 }
 
-button#generate-btn {
+.buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button#generate-btn, #reset-btn {
     display: block;
     width: 100%;
     padding: 15px;
     border: none;
-    background-color: #3498db;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -76,8 +82,20 @@ button#generate-btn {
     transition: background-color 0.3s;
 }
 
+button#generate-btn {
+    background-color: #3498db;
+}
+
 button#generate-btn:hover {
     background-color: #2980b9;
+}
+
+#reset-btn {
+    background-color: #e74c3c;
+}
+
+#reset-btn:hover {
+    background-color: #c0392b;
 }
 
 .output-container {
