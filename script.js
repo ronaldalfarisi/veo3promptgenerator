@@ -122,4 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.getElementById('output-english').value = promptEnglish;
     });
+
+    document.getElementById('reset-btn').addEventListener('click', () => {
+        document.getElementById('prompt-form').reset();
+        document.getElementById('output-indonesia').value = '';
+        document.getElementById('output-english').value = '';
+    });
 }); 
